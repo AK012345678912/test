@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <img src="weather_icons" alt="weather_icons">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" 
+                label="Enter your area name" 
+                value={area} 
+                onchange={areachange}>
+            </lightning-input>
+          
+            <lightning-button label="submit" onclick={submission}> </lightning-button>
+            <template  if:true={check}> 
+                <div style="border-width: 4px 15px; border-style:solid; border-color:green;padding: 20px; ">
+            <p>location :: {location}</p>
+            <p>localtime :: {localtime}</p>
+            <p>weather_descriptions :: {weather_descriptions}</p>  
+            <p> observation time :: {observation_time}  </p>
+            <p> temperature::  {temperature} </p>
+            <p> wind_speed :: {wind_speed}  </p>
+            <p> pressure :: {pressure}  </p>   
+        </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
